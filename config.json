@@ -1,6 +1,16 @@
 {
   "source": ["properties/**/*.json"],
   "platforms": {
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
+      "files": [
+        {
+          "format": "javascript/es6",
+          "destination": "tokens.js"
+        }
+      ]
+    },
     "scss": {
       "transformGroup": "scss",
       "buildPath": "build/scss/",
