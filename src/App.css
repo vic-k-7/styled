@@ -1,5 +1,22 @@
-.App {
-  text-align: center;
+body {
+  padding: 20px;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+
+
+.app {
+}
+
+.pattern {
+  background: #f3f3f3;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.pattern > * {
+  margin-right: 10px;
 }
 
 .App-logo {
