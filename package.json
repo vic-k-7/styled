@@ -11,6 +11,7 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
+    "prestart": "node tokens/build.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "glob": "^7.1.5",
+    "style-dictionary": "^2.8.3"
   }
 }
