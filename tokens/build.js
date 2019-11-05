@@ -5,6 +5,7 @@ function getStyleDictionaryConfig(brand, platform) {
     let jsBuildPath = 'src/tokens/base/js/';
     let scssBuildPath = 'src/tokens/base/scss/';
 
+    // TODO: Avoid hardcoded conditional
     if (brand !== 'base') {
         source = [
             `tokens/brands/${brand}/global.json`, // Brand global
@@ -36,7 +37,7 @@ function getStyleDictionaryConfig(brand, platform) {
                 "transformGroup": "scss",
                 "buildPath": scssBuildPath,
                 "files": [{
-                    "destination": `_variables--${brand}.scss`,
+                    "destination": `${brand}.scss`,
                     "format": "scss/variables"
                 }]
             }
@@ -48,6 +49,7 @@ console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFERENR BRANDS AND PLATFORMS
 
+// TODO: Generate dynamically
 let brands = ['base', 'vibrant'];
 
 brands.map(function (brand) {

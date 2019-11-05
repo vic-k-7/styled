@@ -12,7 +12,7 @@
           "dark"  : { "value": "#ded44f" }
          },
         "orange": { 
-          "light" : { "value": "#F25757" },
+          "light" : { "value": "#ffb4b4" },
           "medium": { "value": "#F25757" },
           "dark"  : { "value": "#de4343" }
           },
@@ -22,7 +22,7 @@
           "dark"  : { "value": "#4dd4cd" }
         },
         "black": {  
-          "light" : { "value": "#353535" },
+          "light" : { "value": "#717171" },
           "medium": { "value": "#272727" },
           "dark"  : { "value": "#000000" }
         },

@@ -6,6 +6,9 @@
         "borderRadius": {
             "value": "{values.borderRadius.small.value}"
         },
+        "borderWidth": {
+            "value": "{values.borderWidth.small.value}"
+        },
         "transition": {
             "value": "{values.transition.moderate.value}"
         },
@@ -71,7 +74,7 @@
         "primary": {
             "default": {
                 "color": {
-                    "value": "{color.dark.medium.value}"
+                    "value": "{color.light.light.value}"
                 },
                 "backgroundColor": {
                     "value": "{color.primary.medium.value}"
@@ -82,13 +85,13 @@
             },
             "hover": {
                 "color": {
-                    "value": "{color.dark.dark.value}"
+                    "value": "{color.light.light.value}"
                 },
                 "backgroundColor": {
-                    "value": "{color.primary.light.value}"
+                    "value": "{color.primary.dark.value}"
                 },
                 "borderColor": {
-                    "value": "{color.primary.dark.value}"
+                    "value": "{color.dark.dark.value}"
                 }
             }
         },
@@ -109,10 +112,10 @@
                     "value": "{color.light.light.value}"
                 },
                 "backgroundColor": {
-                    "value": "{color.secondary.light.value}"
+                    "value": "{color.secondary.dark.value}"
                 },
                 "borderColor": {
-                    "value": "{color.secondary.dark.value}"
+                    "value": "{color.dark.dark.value}"
                 }
             }
         },
@@ -136,7 +139,7 @@
                     "value": "{color.tertiary.light.value}"
                 },
                 "borderColor": {
-                    "value": "{color.tertiary.dark.value}"
+                    "value": "{color.dark.light.value}"
                 }
             }
         },
@@ -167,7 +170,7 @@
         "light": {
             "default": {
                 "color": {
-                    "value": "{color.dark.light.value}"
+                    "value": "{color.dark.medium.value}"
                 },
                 "backgroundColor": {
                     "value": "{color.light.medium.value}"
@@ -184,7 +187,7 @@
                     "value": "{color.light.dark.value}"
                 },
                 "borderColor": {
-                    "value": "{color.light.dark.value}"
+                    "value": "{color.dark.light.value}"
                 }
             }
         }

@@ -2,6 +2,49 @@
     "button": {
         "borderRadius": {
             "value": "{values.borderRadius.large.value}"
+        },
+        "borderWidth": {
+            "value": "{values.borderWidth.large.value}"
+        },
+        "primary": {
+            "default": {
+                "color": {
+                    "value": "{color.dark.medium.value}"
+                }
+            },
+            "hover": {
+                "color": {
+                    "value": "{color.dark.dark.value}"
+                },
+                "backgroundColor": {
+                    "value": "{color.primary.medium.value}"
+                },
+                "borderColor": {
+                    "value": "{color.dark.light.value}"
+                }
+            }
+        },
+        "secondary": {
+            "hover": {
+                "color": {
+                    "value": "{color.light.light.value}"
+                }
+            }
+        },
+        "tertiary": {
+            "default": {
+                "backgroundColor": {
+                    "value": "transparent"
+                }
+            },
+            "hover": {
+                "backgroundColor": {
+                    "value": "transparent"
+                },
+                "borderColor": {
+                    "value": "{color.dark.medium.value}"
+                }
+            }
         }
     }
 }

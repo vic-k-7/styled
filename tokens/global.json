@@ -7,14 +7,14 @@
           "dark"  : { "value": "#111111" }
         },
         "purple": { 
-          "light" : { "value": "#a469b6" },
+          "light" : { "value": "#ecc2f9" },
           "medium": { "value": "#9055A2" },
-          "dark"  : { "value": "#7c418e" }
+          "dark"  : { "value": "#612673" }
          },
         "bluegrey": { 
-          "light" : { "value": "#848da0" },
+          "light" : { "value": "#a8b1c5" },
           "medium": { "value": "#70798C" },
-          "dark"  : { "value": "#5c6578" }
+          "dark"  : { "value": "#3d4454" }
           },
         "beige": {  
           "light" : { "value": "#eee6d0" },
@@ -22,7 +22,7 @@
           "dark"  : { "value": "#c6bea8" }
         },
         "black": {  
-          "light" : { "value": "#353535" },
+          "light" : { "value": "#757575" },
           "medium": { "value": "#272727" },
           "dark"  : { "value": "#000000" }
         },
