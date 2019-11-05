@@ -1,49 +1,18 @@
 const StyleDictionaryPackage = require('style-dictionary');
-const glob = require('glob');
-const fs = require('fs');
-const path = require('path');
-
-// Component setup
-
-var globalCategories = ['font', 'color'];
-var componentsFilesConfig = [ 
-    {
-    "format": "javascript/es6",
-    "destination": "global.js",
-    "filter": function(token) {
-            if (globalCategories.indexOf(token.attributes.category) > -1) {
-                return token;
-            }
-        }
-    }
-];
-
-// Create one token file for each component
-let components = glob.sync('tokens/components/*/*.json');
-components.forEach(function(component){
-    let componentName = path.basename(component, '.json');
-    let componentConfig = {
-        "format": "javascript/es6",
-        "destination": `${componentName}.js`,
-        "filter": function(token) {
-            if (token.attributes.category == componentName) {
-                return token;
-            }
-        }
-    }
-    componentsFilesConfig.push(componentConfig);
-});
-
 
 function getStyleDictionaryConfig(brand, platform) {
-    let source = ['tokens/global/**/*.json', 'tokens/components/**/*.json'];
-    let jsBuildPath = 'build/tokens/base/js/';
-    let scssBuildPath = 'build/tokens/base/scss/';
+    let source = ['tokens/global.json', 'tokens/components/**/*.json'];
+    let jsBuildPath = 'src/tokens/base/js/';
+    let scssBuildPath = 'src/tokens/base/scss/';
 
     if (brand !== 'base') {
-        source = [`tokens/brands/${brand}/**/*.json`, 'tokens/components/**/*.json']
-        jsBuildPath = `build/tokens/brands/${brand}/js/`;
-        scssBuildPath = `build/tokens/brands/${brand}/scss/`
+        source = [
+            `tokens/brands/${brand}/global.json`, // Brand global
+            'tokens/components/**/*.json', // Base components
+            `tokens/brands/${brand}/components/**/*.json` // Brand specific overrides
+        ]
+        jsBuildPath = `src/tokens/brands/${brand}/js/`;
+        scssBuildPath = `src/tokens/brands/${brand}/scss/`
     }
 
     return {
@@ -58,7 +27,7 @@ function getStyleDictionaryConfig(brand, platform) {
                         "destination": `${brand}.es6.js`,
                     },
                     {
-                        "format": "javascript/object",
+                        "format": "javascript/module",
                         "destination": `${brand}.js`,
                     }
                 ]
@@ -77,9 +46,9 @@ function getStyleDictionaryConfig(brand, platform) {
 
 console.log('Build started...');
 
-// PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
+// PROCESS THE DESIGN TOKENS FOR THE DIFFERENR BRANDS AND PLATFORMS
 
-let brands = ['base', 'coloronly'];
+let brands = ['base', 'vibrant'];
 
 brands.map(function (brand) {
   ['js', 'scss'].map(function (platform) {
