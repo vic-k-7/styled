@@ -33,7 +33,6 @@
     ]
   },
   "devDependencies": {
-    "glob": "^7.1.5",
     "style-dictionary": "^2.8.3"
   }
 }
