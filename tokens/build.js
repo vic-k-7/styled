@@ -1,7 +1,7 @@
 const StyleDictionaryPackage = require('style-dictionary');
 
 function getStyleDictionaryConfig(brand, platform) {
-    let source = ['tokens/global.json', 'tokens/components/**/*.json'];
+    let source = ['tokens/global/global.json', 'tokens/components/**/*.json'];
     let jsBuildPath = 'src/tokens/base/js/';
     let scssBuildPath = 'src/tokens/base/scss/';
 
@@ -46,8 +46,6 @@ function getStyleDictionaryConfig(brand, platform) {
 }
 
 console.log('Build started...');
-
-// PROCESS THE DESIGN TOKENS FOR THE DIFFERENR BRANDS AND PLATFORMS
 
 // TODO: Generate dynamically
 let brands = ['base', 'vibrant'];

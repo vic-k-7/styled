@@ -52,12 +52,15 @@ To generate tokens:
 │   ├── brands/
 │       ├── <brand>
 │           ├── components/
+│               ├── <component>/
+│                   ├── <component>.json
 │           ├── global.json
 │   ├── components/
 │       ├── <component>/
 │           ├── <component>.json
+│   ├── global/
+│       ├── global.json
 │   ├── build.js
-│   ├── global.json
 ```
 
 #### Token dist files
