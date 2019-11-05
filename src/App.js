@@ -4,17 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import Select from 'react-select';
 import './App.css';
 
-// Theming
-// import defaultBrand from './themes/defaultBrand';
-// import brand1 from './themes/brand1';
-// import brand2 from './themes/brand2';
-
-// const options = [
-//   {value: 'defaultBrand', label: 'Default brand'},
-//   {value: 'brand1', label: 'Brand 1'},
-//   {value: 'brand2', label: 'Brand 2'},
-// ]
-
 // Style dictionary brands
 import _base from './tokens/base/js/base.js';
 import _vibrant from './tokens/brands/vibrant/js/vibrant.js';
@@ -23,7 +12,6 @@ const options = [
   {value: 'base', label: 'White label brand'},
   {value: 'vibrant', label: 'Vibrant'}
 ]
-
 
 const themes = {
   base: _base,
