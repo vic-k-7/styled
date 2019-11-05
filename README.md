@@ -191,3 +191,8 @@ Now let's make a change and see how that affects things. Open up `properties/col
 
 Now go forth and create! Take a look at all the built-in [transforms](https://amzn.github.io/style-dictionary/#/transforms?id=pre-defined-transforms) and [formats](https://amzn.github.io/style-dictionary/#/formats?id=pre-defined-formats).
 
+## Useful links for dev
+
+https://github.com/amzn/style-dictionary/blob/master/lib/common/formats.js
+https://github.com/amzn/style-dictionary/blob/master/examples/advanced/multi-brand-multi-platform/build.js 
+
