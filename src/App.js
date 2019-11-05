@@ -16,22 +16,19 @@ import './App.css';
 // ]
 
 // Style dictionary brands
-import baseBrand from './tokens/base/js/base.js';
-import coloronlyBrand from './tokens/brands/coloronly/js/coloronly.js';
+import _base from './tokens/base/js/base.js';
+import _vibrant from './tokens/brands/vibrant/js/vibrant.js';
 
 const options = [
-  {value: 'baseBrand', label: 'White label brand'},
-  {value: 'coloronlyBrand', label: 'Color only brand'}
+  {value: 'base', label: 'White label brand'},
+  {value: 'vibrant', label: 'Vibrant'}
 ]
 
 
 const themes = {
-  baseBrand: baseBrand,
-  coloronlyBrand: coloronlyBrand
+  base: _base,
+  vibrant: _vibrant
 }
-
-console.log(baseBrand);
-
 
 class App extends React.Component {
   state = {
@@ -45,19 +42,16 @@ class App extends React.Component {
   };
   render() {
     const { selectedOption } = this.state;
-    console.log(selectedOption.label);
 
     return (
       <div className="app">
-        <h1>Select brand (for demo)</h1>
+        <h1>Select brand</h1>
         <Select
           value={selectedOption}
           onChange={this.handleChange}
           options={options}
-      />
-      <hr/>
-
-        <h1>Displaying: {selectedOption.label}</h1>
+        />
+        <hr/>
         <ThemeProvider theme={themes[selectedOption.value]}>
             <ButtonExamples/>
         </ThemeProvider>

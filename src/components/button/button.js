@@ -22,7 +22,7 @@ const Button = styled.button`
     transition: ${props => props.theme.button.transition.value};
     border-radius: ${props => props.theme.button.borderRadius.value + 'px'};
     padding: ${buttonPadding};
-    border-width: 1px;
+    border-width: ${props => props.theme.button.borderWidth.value + 'px'};;
     border-style: solid;
     border-color: ${props => props.theme.button[props.type].default.borderColor.value};
     background-color: ${props => props.theme.button[props.type].default.backgroundColor.value};
