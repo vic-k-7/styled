@@ -1,0 +1,62 @@
+{
+  "color": {
+    "base": {
+      "gray": {
+        "light" : { "value": "#CCCCCC" },
+        "medium": { "value": "#999999" },
+        "dark"  : { "value": "#111111" }
+      },
+      "yellow": { 
+        "light" : { "value": "#fffc77" },
+        "medium": { "value": "#fff13b" },
+        "dark"  : { "value": "#ded44f" }
+       },
+      "orange": { 
+        "light" : { "value": "#F25757" },
+        "medium": { "value": "#F25757" },
+        "dark"  : { "value": "#de4343" }
+        },
+      "teal": {  
+        "light" : { "value": "#75fcf5" },
+        "medium": { "value": "#61E8E1" },
+        "dark"  : { "value": "#4dd4cd" }
+      },
+      "black": {  
+        "light" : { "value": "#353535" },
+        "medium": { "value": "#272727" },
+        "dark"  : { "value": "#000000" }
+      },
+      "white": {  
+        "light" : { "value": "#ffffff" },
+        "medium": { "value": "#f9f9f9" },
+        "dark"  : { "value": "#dcdcdc" }
+      }
+    },
+    "primary": { 
+      "light" : { "value": "{color.base.yellow.light.value}" },
+      "medium": { "value": "{color.base.yellow.medium.value}" },
+      "dark"  : { "value": "{color.base.yellow.dark.value}" }
+     },
+     "secondary": { 
+      "light" : { "value": "{color.base.orange.light.value}" },
+      "medium": { "value": "{color.base.orange.medium.value}" },
+      "dark"  : { "value": "{color.base.orange.dark.value}" }
+    },
+    "tertiary": { 
+      "light" : { "value": "{color.base.teal.light.value}" },
+      "medium": { "value": "{color.base.teal.medium.value}" },
+      "dark"  : { "value": "{color.base.teal.dark.value}" }
+    },
+    "dark": { 
+      "light" : { "value": "{color.base.black.light.value}" },
+      "medium": { "value": "{color.base.black.medium.value}" },
+      "dark"  : { "value": "{color.base.black.dark.value}" }
+    },
+    "light": { 
+      "light" : { "value": "{color.base.white.light.value}" },
+      "medium": { "value": "{color.base.white.medium.value}" },
+      "dark"  : { "value": "{color.base.white.dark.value}" }
+    },
+    "text" : { "value": "{color.base.black.medium.value}" }
+  }
+}

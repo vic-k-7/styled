@@ -35,20 +35,39 @@ components.forEach(function(component){
 });
 
 
-function getStyleDictionaryConfig(platform) {
+function getStyleDictionaryConfig(brand, platform) {
+    let source = ['tokens/global/**/*.json', 'tokens/components/**/*.json'];
+    let jsBuildPath = 'build/tokens/base/js/';
+    let scssBuildPath = 'build/tokens/base/scss/';
+
+    if (brand !== 'base') {
+        source = [`tokens/brands/${brand}/**/*.json`, 'tokens/components/**/*.json']
+        jsBuildPath = `build/tokens/brands/${brand}/js/`;
+        scssBuildPath = `build/tokens/brands/${brand}/scss/`
+    }
+
     return {
-        "source": ["tokens/**/*.json"],
+        "source": source,
         "platforms": {
             "js": {
                 "transformGroup": "js",
-                "buildPath": "build/tokens/js/",
-                "files": componentsFilesConfig
+                "buildPath": jsBuildPath,
+                "files": [
+                    {
+                        "format": "javascript/es6",
+                        "destination": `${brand}.es6.js`,
+                    },
+                    {
+                        "format": "javascript/object",
+                        "destination": `${brand}.js`,
+                    }
+                ]
             },
             "scss": {
                 "transformGroup": "scss",
-                "buildPath": "build/tokens/scss/",
+                "buildPath": scssBuildPath,
                 "files": [{
-                    "destination": "_variables.scss",
+                    "destination": `_variables--${brand}.scss`,
                     "format": "scss/variables"
                 }]
             }
@@ -60,20 +79,22 @@ console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
 
-// ['brand-1', 'brand-2', 'brand-3'].map(function (brand) {
+let brands = ['base', 'coloronly'];
+
+brands.map(function (brand) {
   ['js', 'scss'].map(function (platform) {
 
     console.log('\n==============================================');
     console.log(`\nProcessing: [${platform}]`);
 
-    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(platform));
+    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(brand, platform));
 
     StyleDictionary.buildPlatform(platform);
 
     console.log('\nEnd processing');
 
   })
-// })
+})
 
 console.log('\n==============================================');
 console.log('\nBuild completed!');
