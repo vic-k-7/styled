@@ -29,12 +29,10 @@ function ButtonExamples() {
             <Button as="a" type="primary">Create</Button>
             </div>
             <div className="pattern">
-                <h3>Button component in different sizes (1-5)</h3>
-                <Button size="1">Create</Button>
-                <Button size="2">Create</Button>
-                <Button size="3">Create</Button>
-                <Button size="4">Create</Button>
-                <Button size="5">Create</Button>
+                <h3>Button component in different sizes (small/medium/large)</h3>
+                <Button size="small">Create</Button>
+                <Button size="medium">Create</Button>
+                <Button size="large">Create</Button>
             </div>
           </div>
     );

@@ -5,23 +5,32 @@ import Select from 'react-select';
 import './App.css';
 
 // Theming
-import defaultBrand from './themes/defaultBrand';
-import brand1 from './themes/brand1';
-import brand2 from './themes/brand2';
+// import defaultBrand from './themes/defaultBrand';
+// import brand1 from './themes/brand1';
+// import brand2 from './themes/brand2';
+
+// const options = [
+//   {value: 'defaultBrand', label: 'Default brand'},
+//   {value: 'brand1', label: 'Brand 1'},
+//   {value: 'brand2', label: 'Brand 2'},
+// ]
+
+// Style dictionary brands
+import baseBrand from './tokens/base/js/base.js';
+import coloronlyBrand from './tokens/brands/coloronly/js/coloronly.js';
 
 const options = [
-  {value: 'defaultBrand', label: 'Default brand'},
-  {value: 'brand1', label: 'Brand 1'},
-  {value: 'brand2', label: 'Brand 2'},
+  {value: 'baseBrand', label: 'White label brand'},
+  {value: 'coloronlyBrand', label: 'Color only brand'}
 ]
 
+
 const themes = {
-  defaultBrand: defaultBrand,
-  brand1: brand1,
-  brand2: brand2
+  baseBrand: baseBrand,
+  coloronlyBrand: coloronlyBrand
 }
 
-console.log(defaultBrand);
+console.log(baseBrand);
 
 
 class App extends React.Component {
