@@ -18,7 +18,7 @@
                     "value": "{values.padding.xsmall.value}"
                 },
                 "paddingX": {
-                    "value": "{values.padding.small.value}"
+                    "value": "{values.padding.medium.value}"
                 },
                 "fontSize": {
                     "value": "{font.size.small.value}"
@@ -37,7 +37,7 @@
             },
             "large": {
                 "paddingY": {
-                    "value": "{values.padding.medium.value}"
+                    "value": "{values.padding.small.value}"
                 },
                 "paddingX": {
                     "value": "{values.padding.large.value}"
