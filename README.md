@@ -1,3 +1,8 @@
+Working example: [http://vixxofsweden.com/code/styled/](http://vixxofsweden.com/code/styled/)
+
+## TLDR;
+Using styled components and style dictionary to create a component library with multi brand capabilities. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
